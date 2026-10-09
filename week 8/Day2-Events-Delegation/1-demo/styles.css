@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f2f4f8;
+  color: #1b2130;
+  line-height: 1.5;
+}
+
+.page-header { text-align: center; padding: 2rem 1rem .5rem; }
+.page-header h1 { margin: 0; }
+.page-header p { margin: .25rem 0 0; color: #5a6277; }
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.station {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 14px rgba(20, 30, 60, .07);
+}
+.station.wide { grid-column: 1 / -1; }
+.station h2 { margin-top: 0; font-size: 1.15rem; }
+
+button, input { font: inherit; }
+button {
+  background: #2f6be0;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+button:focus-visible, input:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: .5rem .75rem;
+  border: 1px solid #c9cfdc;
+  border-radius: 8px;
+  margin: .25rem 0 .5rem;
+}
+label { font-weight: 600; font-size: .9rem; }
+.hint { color: #5a6277; font-size: .9rem; }
+.preview { font-size: 1.2rem; }
+
+.box { display: block; border-radius: 10px; padding: .75rem; margin-top: .5rem; color: #1b2130; text-align: left; width: 100%; }
+.outer { background: #dbe6ff; }
+.middle { background: #b7ccff; }
+.inner { background: #2f6be0; color: #fff; }
+.box.flash { outline: 3px solid #f59e0b; }
+.toggle { display: block; margin-top: .75rem; font-weight: 400; }
+.log { font-family: ui-monospace, Consolas, monospace; font-size: .85rem; min-height: 3rem; }
+
+.inline-form { display: flex; gap: .5rem; align-items: center; }
+.inline-form input { margin: 0; }
+
+.chip-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.chip-list li {
+  background: #eef2fb;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  padding: .3rem .4rem .3rem .9rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+}
+.chip-list li.selected { border-color: #2f6be0; background: #dbe6ff; }
+.chip-list .remove { background: transparent; color: #b42318; padding: .1rem .5rem; border-radius: 999px; }
+.chip-list .remove:hover { background: #fde2e0; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}

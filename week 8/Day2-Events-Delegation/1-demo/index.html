@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 Demo · Event Lab</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>Event Lab 🧪</h1>
+    <p>Day 2 demo: event listeners, the event object, bubbling and delegation</p>
+  </header>
+
+  <main>
+    <!-- STATION 1: click -->
+    <section class="station">
+      <h2>1 · Click</h2>
+      <button id="like-btn" type="button">👍 Like</button>
+      <p>Likes: <strong id="like-count">0</strong></p>
+    </section>
+
+    <!-- STATION 2: input & keyboard -->
+    <section class="station">
+      <h2>2 · Input &amp; keyboard</h2>
+      <label for="name-input">Your name</label>
+      <input id="name-input" type="text" placeholder="Start typing…" autocomplete="off">
+      <p class="preview">Hello, <span id="name-preview">stranger</span>!</p>
+      <p class="hint" id="key-log">Last key: none</p>
+    </section>
+
+    <!-- STATION 3: form submit -->
+    <section class="station">
+      <h2>3 · Form submit</h2>
+      <form id="signup-form">
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="you@example.com">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p id="form-message" class="hint" role="status"></p>
+    </section>
+
+    <!-- STATION 4: bubbling -->
+    <section class="station">
+      <h2>4 · Bubbling</h2>
+      <div class="box outer" id="outer">outer
+        <div class="box middle" id="middle">middle
+          <button class="box inner" id="inner" type="button">inner (click me)</button>
+        </div>
+      </div>
+      <label class="toggle"><input type="checkbox" id="stop-toggle"> stopPropagation() on inner</label>
+      <ol id="bubble-log" class="log"></ol>
+    </section>
+
+    <!-- STATION 5: delegation -->
+    <section class="station wide">
+      <h2>5 · Event delegation</h2>
+      <form id="add-fruit-form" class="inline-form">
+        <label for="fruit-input" class="sr-only">Fruit name</label>
+        <input id="fruit-input" type="text" placeholder="Add a fruit" autocomplete="off">
+        <button type="submit">Add</button>
+      </form>
+      <ul id="fruit-list" class="chip-list">
+        <li><span>Mango</span> <button type="button" class="remove" aria-label="Remove Mango">✕</button></li>
+        <li><span>Pineapple</span> <button type="button" class="remove" aria-label="Remove Pineapple">✕</button></li>
+        <li><span>Pawpaw</span> <button type="button" class="remove" aria-label="Remove Pawpaw">✕</button></li>
+      </ul>
+      <p class="hint" id="fruit-log">Click a fruit to select it, or ✕ to remove it.</p>
+    </section>
+  </main>
+
+  <script src="demo-start.js"></script>
+</body>
+</html>

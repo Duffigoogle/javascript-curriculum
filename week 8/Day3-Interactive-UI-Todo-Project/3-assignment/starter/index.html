@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spendwise · Expense Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Spendwise 💰</h1>
+      <p class="lead">Track where your money goes this month.</p>
+    </header>
+
+    <section class="summary" aria-label="Summary">
+      <div class="stat">
+        <p class="stat-label">Total spent</p>
+        <p class="stat-value" id="total">₦0</p>
+      </div>
+      <div class="stat">
+        <p class="stat-label">Expenses</p>
+        <p class="stat-value" id="count">0</p>
+      </div>
+      <div class="stat">
+        <p class="stat-label">Biggest category</p>
+        <p class="stat-value" id="top-category">None</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Add an expense</h2>
+      <form id="expense-form" novalidate>
+        <div class="field">
+          <label for="description">Description</label>
+          <input id="description" type="text" maxlength="60" placeholder="e.g. Lunch at work">
+          <p class="field-error" id="description-error"></p>
+        </div>
+        <div class="field">
+          <label for="amount">Amount (₦)</label>
+          <input id="amount" type="number" min="1" step="1" placeholder="e.g. 2500">
+          <p class="field-error" id="amount-error"></p>
+        </div>
+        <div class="field">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="">Choose…</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Data & Airtime">Data &amp; Airtime</option>
+            <option value="Bills">Bills</option>
+            <option value="Fun">Fun</option>
+          </select>
+          <p class="field-error" id="category-error"></p>
+        </div>
+        <div class="field">
+          <label for="date">Date</label>
+          <input id="date" type="date">
+          <p class="field-error" id="date-error"></p>
+        </div>
+        <button type="submit" class="primary">Add expense</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>Expenses</h2>
+        <div class="list-controls">
+          <label for="filter-category" class="sr-only">Filter by category</label>
+          <select id="filter-category">
+            <option value="all">All categories</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Data & Airtime">Data &amp; Airtime</option>
+            <option value="Bills">Bills</option>
+            <option value="Fun">Fun</option>
+          </select>
+          <label for="sort" class="sr-only">Sort expenses</label>
+          <select id="sort">
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="highest">Highest amount</option>
+            <option value="lowest">Lowest amount</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Each expense is rendered by JavaScript as:
+      <li class="expense" data-id="123">
+        <div class="expense-main">
+          <p class="expense-desc">Lunch at work</p>
+          <p class="expense-meta"><span class="tag">Food</span> · 9 Oct 2026</p>
+        </div>
+        <p class="expense-amount">₦2,500</p>
+        <button type="button" class="delete" aria-label="Delete Lunch at work">✕</button>
+      </li> -->
+      <ul id="expense-list" class="expense-list"></ul>
+      <p id="empty-state" class="empty-state">No expenses yet. Add one above.</p>
+      <p class="filtered-total" id="filtered-total"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

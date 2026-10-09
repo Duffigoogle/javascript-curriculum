@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 2 Activity · Colour Palette Picker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Colour Palette Picker 🎨</h1>
+
+    <section class="preview" id="preview" aria-live="polite">
+      <p class="preview-name" id="preview-name">Pick a colour</p>
+      <p class="preview-hex" id="preview-hex">#FFFFFF</p>
+    </section>
+
+    <div class="toolbar">
+      <p>Colours picked: <strong id="pick-count">0</strong></p>
+      <button type="button" id="copy-btn">Copy hex</button>
+      <span id="copy-status" class="status" role="status"></span>
+    </div>
+
+    <ul class="palette" id="palette" aria-label="Colour swatches">
+      <li><button type="button" class="swatch" data-color="#E4572E" data-name="Flame" style="background:#E4572E" aria-label="Flame"></button></li>
+      <li><button type="button" class="swatch" data-color="#F3A712" data-name="Saffron" style="background:#F3A712" aria-label="Saffron"></button></li>
+      <li><button type="button" class="swatch" data-color="#29335C" data-name="Space" style="background:#29335C" aria-label="Space"></button></li>
+      <li><button type="button" class="swatch" data-color="#669BBC" data-name="Sky" style="background:#669BBC" aria-label="Sky"></button></li>
+      <li><button type="button" class="swatch" data-color="#2A9D8F" data-name="Lagoon" style="background:#2A9D8F" aria-label="Lagoon"></button></li>
+    </ul>
+    <p class="hint" id="hover-hint">Hover a swatch to see its name. Keys 1–9 pick a swatch. Double-click a swatch to delete it.</p>
+
+    <form id="add-form" class="add-form">
+      <h2>Add your own colour</h2>
+      <label for="new-color">Colour</label>
+      <input type="color" id="new-color" value="#8E44AD">
+      <label for="new-name">Name</label>
+      <input type="text" id="new-name" placeholder="e.g. Grape" required>
+      <button type="submit">Add swatch</button>
+    </form>
+  </main>
+
+  <script src="activity.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f5f9;
+  color: #1c2030;
+  line-height: 1.55;
+}
+
+.help { max-width: 760px; margin: 2rem auto; padding: 0 1.25rem 3rem; }
+header h1 { margin: 0; font-size: 2.1rem; }
+.lead { color: #586078; margin-top: .25rem; }
+
+.controls { background: #fff; border-radius: 14px; padding: 1.25rem; margin: 1.25rem 0; box-shadow: 0 4px 14px rgba(20, 30, 60, .06); }
+.controls > label { font-weight: 600; display: block; }
+
+input[type="search"] {
+  width: 100%;
+  font: inherit;
+  padding: .6rem .8rem;
+  border-radius: 10px;
+  border: 1px solid #c8cddb;
+  margin: .35rem 0 .9rem;
+}
+
+button { font: inherit; cursor: pointer; }
+button:focus-visible, input:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+
+.filters { display: flex; flex-wrap: wrap; gap: .5rem; }
+.filter { border: 1px solid #c8cddb; background: #fff; border-radius: 999px; padding: .35rem .9rem; }
+.filter.active { background: #1c2030; color: #fff; border-color: #1c2030; }
+
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; margin-top: 1rem; }
+.row p { margin: 0; flex: 1; color: #586078; }
+.check { font-size: .9rem; }
+.ghost { background: none; border: 1px solid #c8cddb; border-radius: 8px; padding: .3rem .8rem; }
+
+.faq-list { display: grid; gap: .6rem; }
+.faq-item { background: #fff; border-radius: 12px; box-shadow: 0 2px 8px rgba(20, 30, 60, .05); overflow: hidden; }
+.faq-item h2 { margin: 0; font-size: 1.05rem; }
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 1rem 3rem 1rem 1.25rem;
+  font-weight: 600;
+  position: relative;
+}
+.faq-question::after { content: "+"; position: absolute; right: 1.25rem; font-size: 1.4rem; line-height: 1; top: .85rem; }
+.faq-item.open .faq-question::after { content: "−"; }
+.faq-item.open { outline: 2px solid #2f6be0; }
+.faq-answer { padding: 0 1.25rem 1rem; color: #3b4256; }
+.faq-answer p { margin: 0; }
+
+mark { background: #ffe58a; padding: 0 .1rem; border-radius: 3px; }
+.no-results { text-align: center; color: #586078; padding: 2rem 0; }

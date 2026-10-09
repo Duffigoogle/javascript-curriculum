@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeCamp Academy · Help Centre</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="help">
+    <header>
+      <h1>Help Centre</h1>
+      <p class="lead">Answers to the questions CodeCamp Academy students ask most.</p>
+    </header>
+
+    <section class="controls" aria-label="Search and filter">
+      <label for="search">Search questions</label>
+      <input type="search" id="search" placeholder="Try “certificate” or “payment”" autocomplete="off">
+
+      <div class="filters" id="filters" role="group" aria-label="Filter by category">
+        <button type="button" class="filter active" data-category="all">All</button>
+        <button type="button" class="filter" data-category="account">Account</button>
+        <button type="button" class="filter" data-category="payments">Payments</button>
+        <button type="button" class="filter" data-category="courses">Courses</button>
+      </div>
+
+      <div class="row">
+        <p id="result-count" role="status">Showing 8 of 8 questions</p>
+        <label class="check"><input type="checkbox" id="allow-multiple"> Allow several open</label>
+        <button type="button" id="expand-all" class="ghost">Expand all</button>
+        <button type="button" id="collapse-all" class="ghost">Collapse all</button>
+      </div>
+    </section>
+
+    <section id="faq-list" class="faq-list" aria-label="Frequently asked questions">
+      <div class="faq-item" data-category="account">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a1">How do I reset my password?</button></h2>
+        <div class="faq-answer" id="a1" hidden><p>Click “Forgot password” on the login page and follow the link we email you. The link expires after 30 minutes.</p></div>
+      </div>
+      <div class="faq-item" data-category="account">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a2">Can I change the email on my account?</button></h2>
+        <div class="faq-answer" id="a2" hidden><p>Yes. Go to Settings → Profile, enter the new email address and confirm it from your inbox.</p></div>
+      </div>
+      <div class="faq-item" data-category="payments">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a3">Which payment methods do you accept?</button></h2>
+        <div class="faq-answer" id="a3" hidden><p>We accept debit cards, bank transfer and USSD. Instalment payment is available for courses longer than 8 weeks.</p></div>
+      </div>
+      <div class="faq-item" data-category="payments">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a4">Can I get a refund?</button></h2>
+        <div class="faq-answer" id="a4" hidden><p>You can request a full refund within 7 days of starting a course, as long as you have completed fewer than 3 lessons.</p></div>
+      </div>
+      <div class="faq-item" data-category="courses">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a5">Do I get a certificate?</button></h2>
+        <div class="faq-answer" id="a5" hidden><p>Yes. You receive a digital certificate once you complete every module and submit the final project.</p></div>
+      </div>
+      <div class="faq-item" data-category="courses">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a6">Are classes live or recorded?</button></h2>
+        <div class="faq-answer" id="a6" hidden><p>Both. Classes run live three times a week, and every session is recorded so you can watch it later.</p></div>
+      </div>
+      <div class="faq-item" data-category="courses">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a7">What do I need to start the JavaScript course?</button></h2>
+        <div class="faq-answer" id="a7" hidden><p>A laptop, a stable internet connection, a code editor such as VS Code, and basic HTML and CSS knowledge.</p></div>
+      </div>
+      <div class="faq-item" data-category="account">
+        <h2><button class="faq-question" type="button" aria-expanded="false" aria-controls="a8">How do I delete my account?</button></h2>
+        <div class="faq-answer" id="a8" hidden><p>Email support from your registered address. Deleting your account also removes your certificates, so download them first.</p></div>
+      </div>
+    </section>
+
+    <p id="no-results" class="no-results" hidden>No questions match your search. Try another word.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

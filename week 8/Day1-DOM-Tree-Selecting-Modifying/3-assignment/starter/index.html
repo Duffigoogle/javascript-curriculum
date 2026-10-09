@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadget Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="store-header">
+    <h1>Gadget Store</h1>
+    <p id="summary">Loading products…</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="deal-heading" class="deal" id="deal" hidden>
+      <h2 id="deal-heading">💸 Best deal today</h2>
+      <p id="deal-text"></p>
+    </section>
+
+    <!-- Your JavaScript renders one .product card per product in here -->
+    <section id="product-grid" class="grid" aria-label="Products"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

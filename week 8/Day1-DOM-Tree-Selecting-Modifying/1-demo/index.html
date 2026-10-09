@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 1 Demo · Profile Card Makeover</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1 id="page-title">Developer Profile</h1>
+    <p class="subtitle">Day 1 demo: the DOM tree, selecting and modifying elements</p>
+  </header>
+
+  <main>
+    <article class="card" id="profile-card" data-status="offline">
+      <img class="avatar" src="https://placehold.co/160x160?text=Avatar" alt="Profile picture">
+      <div class="card-body">
+        <h2 class="name">Your Name</h2>
+        <p class="role">Job title goes here</p>
+        <p class="status">Status: <span id="status-text">offline</span></p>
+
+        <h3>Skills</h3>
+        <ul class="skills">
+          <li class="skill">HTML</li>
+          <li class="skill">CSS</li>
+          <li class="skill">Photoshop</li>
+        </ul>
+
+        <a class="link" href="#">Portfolio</a>
+      </div>
+    </article>
+
+    <aside class="notice" id="old-notice">⚠️ This profile is out of date.</aside>
+  </main>
+
+  <!-- Open the browser console (F12) and follow along. -->
+  <!-- Swap demo-start.js for demo-finished.js to see the end result. -->
+  <script src="demo-start.js"></script>
+</body>
+</html>

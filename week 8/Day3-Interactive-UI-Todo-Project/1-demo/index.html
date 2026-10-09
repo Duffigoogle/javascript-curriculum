@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 3 Demo · To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="todo-app">
+    <h1>My Tasks ✅</h1>
+
+    <form id="todo-form" class="todo-form" novalidate>
+      <label for="todo-input" class="sr-only">New task</label>
+      <input id="todo-input" type="text" placeholder="What needs doing?" autocomplete="off" maxlength="100">
+      <button type="submit">Add</button>
+    </form>
+    <p id="form-error" class="error" role="alert"></p>
+
+    <div class="filters" id="filters" role="group" aria-label="Show tasks">
+      <button type="button" class="filter active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter" data-filter="active" aria-pressed="false">Active</button>
+      <button type="button" class="filter" data-filter="completed" aria-pressed="false">Completed</button>
+    </div>
+
+    <ul id="todo-list" class="todo-list" aria-label="Tasks"></ul>
+    <p id="empty-state" class="empty-state">Nothing here yet. Add your first task above.</p>
+
+    <footer class="todo-footer">
+      <span id="items-left">0 items left</span>
+      <button type="button" id="clear-completed" class="link-btn">Clear completed</button>
+    </footer>
+  </main>
+
+  <script src="demo-start.js"></script>
+</body>
+</html>

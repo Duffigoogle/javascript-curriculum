@@ -1,0 +1,70 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f3f5f9;
+  color: #1c2230;
+}
+
+.store-header { text-align: center; padding: 2rem 1rem 1rem; }
+.store-header h1 { margin: 0; font-size: 2.2rem; }
+#summary { color: #586078; margin: .5rem 0 0; }
+
+main { max-width: 1040px; margin: 0 auto; padding: 1rem 1.25rem 3rem; }
+
+.deal {
+  background: #fff7e6;
+  border: 1px solid #f6c56b;
+  border-radius: 12px;
+  padding: .5rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ---- Product card (build this structure in JavaScript) ----
+<article class="product">
+  <img src="..." alt="...">
+  <h3>Name</h3>
+  <p class="category">Category</p>
+  <p class="price">₦00,000</p>
+  <p class="stock">In stock</p>
+</article>
+*/
+.product {
+  background: #fff;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 4px 14px rgba(20, 30, 60, .07);
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  position: relative;
+}
+
+.product img { width: 100%; border-radius: 10px; aspect-ratio: 4 / 3; object-fit: cover; }
+.product h3 { margin: .5rem 0 0; font-size: 1.1rem; }
+.category { margin: 0; color: #586078; font-size: .9rem; }
+.price { margin: .25rem 0 0; font-weight: 700; font-size: 1.2rem; }
+.stock { margin: 0; font-size: .9rem; color: #1f8a5b; }
+
+/* State classes */
+.product.out-of-stock { opacity: .55; }
+.product.out-of-stock .stock { color: #b42318; }
+.product.best-deal { outline: 3px solid #f59e0b; }
+.badge {
+  position: absolute;
+  top: .75rem;
+  left: .75rem;
+  background: #f59e0b;
+  color: #1c2230;
+  font-weight: 700;
+  font-size: .8rem;
+  padding: .2rem .6rem;
+  border-radius: 999px;
+}
