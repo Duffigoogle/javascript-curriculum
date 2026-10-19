@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>🎓 Student Dashboard</h1>
+    <button id="reload-btn">Reload Dashboard</button>
+  </header>
+
+  <p id="load-time" class="meta"></p>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Profile</h2>
+      <div id="profile"></div>
+    </section>
+
+    <section class="card">
+      <h2>My Courses</h2>
+      <ul id="courses"></ul>
+    </section>
+
+    <section class="card wide">
+      <h2>Announcements</h2>
+      <ul id="announcements"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
