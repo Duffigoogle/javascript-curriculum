@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 2 Demo · Fetch & REST</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🌐 Fetch, REST & JSON</h1>
+
+    <!-- PART 2 -->
+    <section class="panel">
+      <h2>Part 2 · Random Dog 🐶</h2>
+      <button id="dog-btn">Fetch a dog</button>
+      <div id="dog-box" class="dog-box"></div>
+    </section>
+
+    <!-- PART 3 -->
+    <section class="panel">
+      <h2>Part 3 · Users (GET)</h2>
+      <button id="users-btn">Load users</button>
+      <p id="users-status" class="status"></p>
+      <div id="users" class="user-grid"></div>
+      <div id="posts"></div>
+    </section>
+
+    <!-- PART 4 -->
+    <section class="panel">
+      <h2>Part 4 · Errors</h2>
+      <button id="bad-btn" class="danger">Fetch user #999</button>
+      <button id="offline-btn" class="danger">Fetch a broken URL</button>
+      <p id="error-status" class="status"></p>
+    </section>
+
+    <!-- PART 5 -->
+    <section class="panel">
+      <h2>Part 5 · Create a post (POST)</h2>
+      <form id="post-form">
+        <input id="post-title" placeholder="Title" required />
+        <textarea id="post-body" placeholder="What's on your mind?" required></textarea>
+        <button type="submit">Send POST</button>
+      </form>
+      <pre id="post-result" class="code"></pre>
+    </section>
+  </main>
+
+  <!-- Switch to demo-finished.js to show the completed version -->
+  <script src="demo-start.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: #fffaf3;
+  color: #292524;
+  font-size: 18px;
+}
+
+.hero {
+  background: #ea580c;
+  color: white;
+  text-align: center;
+  padding: 40px 16px 28px;
+}
+.hero h1 { margin: 0; font-size: 2.4rem; }
+.hero p { margin: 8px 0 20px; opacity: 0.9; }
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.search input {
+  flex: 1 1 240px;
+  font: inherit;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background: #292524;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button.secondary { background: #fde68a; color: #292524; }
+
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 18px; }
+.chip {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+.chip:hover { background: rgba(255, 255, 255, 0.35); }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+.status { text-align: center; color: #78716c; }
+.status.error { color: #b91c1c; font-weight: 600; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s;
+}
+.card:hover { transform: translateY(-4px); }
+.card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.card .info { padding: 12px 14px; }
+.card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.tag {
+  display: inline-block;
+  background: #ffedd5;
+  color: #9a3412;
+  font-size: 0.8rem;
+  padding: 2px 8px;
+  border-radius: 6px;
+  margin-right: 4px;
+}
+
+.details {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.details img { width: 100%; max-width: 380px; border-radius: 12px; }
+.details .layout { display: flex; flex-wrap: wrap; gap: 24px; }
+.details .layout > div { flex: 1 1 300px; }
+.details p { line-height: 1.7; white-space: pre-line; }
+.hidden { display: none; }
