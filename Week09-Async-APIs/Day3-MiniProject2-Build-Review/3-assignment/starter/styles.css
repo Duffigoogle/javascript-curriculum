@@ -1,0 +1,103 @@
+/* =====================================================
+   Mini Project 2 — Starter styles
+   Change the colours in :root to make it yours!
+   ===================================================== */
+
+:root {
+  --primary: #4f46e5;
+  --primary-dark: #3730a3;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --error: #b91c1c;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 40px 16px 32px;
+}
+.header h1 { margin: 0; font-size: 2.4rem; }
+.tagline { margin: 6px 0 20px; opacity: 0.9; }
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.search input {
+  flex: 1 1 220px;
+  font: inherit;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+}
+
+button {
+  border: none;
+  background: var(--primary-dark);
+  color: white;
+  font: inherit;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+button:disabled { opacity: 0.6; cursor: wait; }
+
+/* ---------- Layout ---------- */
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+
+.status { text-align: center; color: var(--muted); min-height: 1.5em; }
+.status.error { color: var(--error); font-weight: 600; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.card:hover { transform: translateY(-4px); }
+.card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.card .body { padding: 14px 16px; }
+.card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+.card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Details ---------- */
+.details {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-top: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.hidden { display: none; }
+
+.footer { text-align: center; color: var(--muted); padding: 24px 16px 40px; font-size: 0.9rem; }

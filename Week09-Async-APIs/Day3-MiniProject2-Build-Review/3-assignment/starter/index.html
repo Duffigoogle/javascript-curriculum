@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: change the title -->
+  <title>My API App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <!-- TODO: your app name + tagline -->
+    <h1>My API App</h1>
+    <p class="tagline">One sentence about what your app does</p>
+
+    <!-- Remove this form if your app doesn't need search -->
+    <form id="search-form" class="search">
+      <input id="search-input" type="text" placeholder="Search..." />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main class="container">
+    <!-- Loading / empty / error messages show here -->
+    <p id="status" class="status"></p>
+
+    <!-- Your cards / list render here -->
+    <div id="results" class="grid"></div>
+
+    <!-- Optional: details view -->
+    <section id="details" class="details hidden"></section>
+  </main>
+
+  <footer class="footer">
+    <!-- TODO: credit the API you used -->
+    Built by YOUR NAME · Data from API NAME
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

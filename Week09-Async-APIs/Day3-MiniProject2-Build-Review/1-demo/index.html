@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Now</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>🌦️ Weather Now</h1>
+
+    <form id="search-form" class="search">
+      <input id="city-input" type="text" placeholder="Enter a city, e.g. Port Harcourt" required />
+      <button type="submit">Get weather</button>
+    </form>
+
+    <p id="status" class="status">Search for a city to see the weather.</p>
+
+    <section id="current" class="current hidden"></section>
+
+    <section id="forecast-section" class="hidden">
+      <h2>Next 5 days</h2>
+      <div id="forecast" class="forecast"></div>
+    </section>
+
+    <footer>Data: Open-Meteo.com</footer>
+  </main>
+
+  <!-- Switch to demo-finished.js to show the completed version -->
+  <script src="demo-start.js"></script>
+</body>
+</html>

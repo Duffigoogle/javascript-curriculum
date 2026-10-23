@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeamBook · Sample Mini Project 2</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>👥 TeamBook</h1>
+    <p class="tagline">A searchable team directory powered by the Random User API</p>
+
+    <form id="search-form" class="search">
+      <input id="search-input" type="text" placeholder="Search by name or country..." />
+      <button type="submit">Search</button>
+    </form>
+
+    <div class="filters" id="filters">
+      <button type="button" data-gender="all" class="active">All</button>
+      <button type="button" data-gender="female">Women</button>
+      <button type="button" data-gender="male">Men</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <p id="status" class="status"></p>
+    <div id="results" class="grid"></div>
+    <button id="load-more" class="load-more hidden">Load more people</button>
+    <section id="details" class="details hidden"></section>
+  </main>
+
+  <footer class="footer">Sample project · Data from randomuser.me</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

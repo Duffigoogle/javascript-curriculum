@@ -1,0 +1,73 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: linear-gradient(160deg, #0ea5e9, #6366f1);
+  color: white;
+  font-size: 18px;
+}
+
+.app { max-width: 720px; margin: 0 auto; padding: 40px 16px; }
+h1 { text-align: center; font-size: 2.6rem; margin: 0 0 24px; }
+
+.search { display: flex; gap: 10px; flex-wrap: wrap; }
+.search input {
+  flex: 1 1 240px;
+  font: inherit;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+}
+.search button {
+  border: none;
+  background: #0f172a;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.search button:disabled { opacity: 0.6; cursor: wait; }
+
+.status { text-align: center; margin: 20px 0; opacity: 0.9; }
+.status.error {
+  background: rgba(220, 38, 38, 0.85);
+  padding: 12px;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.current {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 28px;
+  text-align: center;
+}
+.current .place { font-size: 1.4rem; margin: 0; }
+.current .icon { font-size: 4.5rem; line-height: 1.1; }
+.current .temp { font-size: 3.6rem; font-weight: 700; margin: 0; }
+.current .desc { font-size: 1.2rem; margin: 4px 0 16px; }
+.current .extras { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+
+h2 { margin: 32px 0 12px; font-size: 1.3rem; }
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+}
+.day {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 14px;
+  text-align: center;
+}
+.day .icon { font-size: 2rem; }
+.day .name { font-weight: 600; }
+.day .range { opacity: 0.9; }
+
+.hidden { display: none; }
+footer { text-align: center; margin-top: 40px; opacity: 0.7; font-size: 0.85rem; }
